@@ -165,7 +165,7 @@ export default function MainContent() {
 	return (
 		<>
 			{/* TOP ROW */}
-			<Grid container>
+			<Grid container sx={{marginTop:"20px"}}>
 				<Grid xs={6}>
 					<div>
 						<h2>{today}</h2>
@@ -188,10 +188,8 @@ export default function MainContent() {
 			<Divider style={{ borderColor: "white", opacity: "0.1" }} />
 
 			{/* PRAYERS CARDS */}
-			<Stack
-				direction="row"
-				justifyContent={"space-around"}
-				style={{ marginTop: "50px" }}
+			<div
+				className=" grid  md:grid-cols-3 xl:grid-cols-5 gap-5 place-items-center mt-28"
 			>
 				<Prayer
 					name="الفجر"
@@ -218,7 +216,7 @@ export default function MainContent() {
 					time={timings.Isha}
 					image="https://wepik.com/api/image/ai/9a07bc25-1200-4873-8743-1c370e9eff4d"
 				/>
-			</Stack>
+			</div>
 			{/*== PRAYERS CARDS ==*/}
 
 			{/* SELECT CITY */}
@@ -227,7 +225,7 @@ export default function MainContent() {
 				justifyContent={"center"}
 				style={{ marginTop: "40px" }}
 			>
-				<FormControl style={{ width: "20%" }}>
+				<FormControl sx={{ width: "20%", mb:"20px" }}>
 					<InputLabel id="demo-simple-select-label">
 						<span style={{ color: "white" }}>المدينة</span>
 					</InputLabel>
